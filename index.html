@@ -1,0 +1,904 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>OTUS Онлайн-образование</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/prism.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			
+			<div class="slides">
+				<!-- Slide #1 -->
+				<section class="slide-1">
+					<div class="slide-inner-wrapper">
+						<img class="slide__front-logo" src="./images/front-logo.png" alt="otus-logo"/>
+					</div>
+				</section>
+				<!-- Slide #2 -->
+				<section class="slide-2">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<div class="line"></div>
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">JSX как основа ReactJS</div>
+						<img class="slide__image" src="./images/owl.png" alt="otus-logo"/>
+					</div>
+				</section>
+				<!-- Slide #3 -->
+				<section class="slide-3">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Как меня слышно && видно?</div>
+						<div class="slide-content">Если нет – напишите, если слышите – смайлик в чат</div>
+					</div>
+				</section>
+				<!-- Slide #4 -->
+				<section class="slide-4">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Кто этот парень?</div>
+						<ul class="slide-content__list decimal">
+							<li class="slide__list-item">Василий <span>@vvscode</span> Ванчук</li>
+							<li class="slide__list-item">Последние 7 лет разрабатываю на JS</li>
+							<li class="slide__list-item">Начал работать с React 4 года назад</li>
+							<li class="slide__list-item">React не виноват</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #5 -->
+				<section class="slide-5">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">О Вебинаре:</div>
+						<div class="slide-content">Что сможем делать после вебинара?</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Создавать компоненты</li>
+							<li class="slide__list-item">Понимать и применять синтаксис JSX</li>
+							<li class="slide__list-item">Типизировать компоненты</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #6 -->
+				<section class="slide-6">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Курс о разработке с помощью React <br>Курс НЕ о разработке React</div>
+						<div class="slide-content">Если вам все же интересно как устроен React:</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">https://pomb.us/build-your-own-react/</li>
+							<li class="slide__list-item">https://jasonformat.com/wtf-is-jsx/</li>
+							<li class="slide__list-item">https://github.com/pomber/didact</li>
+							<li class="slide__list-item">Paul O Shannessy - Building React From Scratch https://www.youtube.com/watch?v=_MAD4Oly9yg</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #7 -->
+				<section class="slide-7">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<img class="slide__front-logo" src="./images/owl.png" alt="otus-logo"/>
+						<div class="slide__title">React - шаблонизатор</div>
+					</div>
+				</section>
+				<!-- Slide #8 -->
+				<section class="slide-8">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Шаблонизаторы: две проблемы</div>
+						<ul class="slide-content__list decimal">
+							<li class="slide__list-item">Скорость разработки приложения</li>
+							<li class="slide__list-item">Скорость работы приложения</li>
+						</ul>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/">https://ru.reactjs.org/</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #9 -->
+				<section class="slide-9">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">React: что говорят его разработчики</div>
+						<ul class="slide-content__list decimal">
+							<li class="slide__list-item">Декларативный</li>
+							<li class="slide__list-item">Основан на компонентах</li>
+							<li class="slide__list-item">Научитесь однажды — пишите где угодно</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #10 -->
+				<section class="slide-10">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Что такое React?</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Для интерактивных веб-интересов (SPA)</li>
+							<li class="slide__list-item">С компонентами (но не Web Components)</li>
+							<li class="slide__list-item">Оптимизация обновлений через vDOM</li>
+							<li class="slide__list-item">Минимальный синтаксис шаблонов — JSX</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #11 -->
+				<section class="slide-11">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #12 -->
+				<section class="slide-12">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">Из чего состоит приложение на реакт?</div>
+						<div class="slide-content">React-элементы — это составляющие блоки React-приложений. Их <u>можно перепутать с более известной концепцией «компонентов»</u>, 
+						но в отличие от компонента, элемент описывает то, что вы хотите увидеть на экране.<br> <strong>React-элементы иммутабельны.</strong></div>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/docs/glossary.html">https://ru.reactjs.org/docs/glossary.html</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #13 -->
+				<section class="slide-13">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Внутреннее представление React-элемента</div>
+						<div class="slide-content">
+						<pre><code class="language-jsx line-numbers">
+							React.createElement(
+								'div',
+								{
+									className: 'wrapper',
+									style: {
+										margin: '5px',
+									},
+								},
+								React.createElement(
+									'button',
+									{
+										onClick: function onClick() {
+											return alert('Click');
+									},
+										className: 'btn',
+									},
+									'Click me',
+								)
+							);
+						</code></pre>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #14 -->
+				<section class="slide-14">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Небольшой пример</div>
+						<div class="slide-content">
+						<pre><code class="language-markup line-numbers">
+						&lt;div class="wrapper" style="margin: 5px">
+							&lt;button onclick="alert('Click')" class="btn">Click me&lt;/button>
+						&lt;/div>
+						</code></pre>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #15 -->
+				<section class="slide-15">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">Внутреннее представление React-элемента</div>
+						<div class="slide__subtitle">createElement()</div>
+						<div class="slide-content">
+						<pre class="auto"><code class="language-jsx line-numbers">
+							React.createElement(
+								type,
+								[props],
+								[...children]
+							)
+						</code></pre>
+						Создаёт и возвращает новый <u>React-элемент</u> определённого типа. Аргументом <mark>type</mark> может быть строка
+						, содержащая имя тега (например, <mark>'div'</mark> или <mark>'span'</mark>), React-компонент (класс или функция) или React-фрагмент
+						</div>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/docs/react-api.html#createelement">https://ru.reactjs.org/docs/react-api.html#createelement</a>
+							
+						</div>
+					</div>
+				</section>
+				<!-- Slide #16 -->
+				<section class="slide-16">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Что такое компонент?</div>
+						<div class="slide-content">
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Приложения на реакте (и других современных фреймворках) используют компонентную архитектуру view-слоя</li>
+							<li class="slide__list-item">Компонент инкапсулирует логику отрисовки части интерфейса</li>
+							<li class="slide__list-item">Компонент принимает данные и выводит интерфейс — в нашем случае это HTML</li>
+							<li class="slide__list-item">При изменении данных компонент сам обновляет HTML</li>
+							<li class="slide__list-item">Мы можем узнать о бизнес-действии пользователя в компоненте</li>
+							<li class="slide__list-item">мпонент может содержать другие компоненты</li>
+							<li class="slide__list-item"><strong>Компонент = шаблон + интерактивность</strong></li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #17 -->
+				<section class="slide-17">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">Из чего состоит приложение на реакт?</div>
+						<div class="slide-content"><i><strong>React-компоненты</strong> — это маленькие, повторно используемые части кода, 
+							которые возвращают React-элементы для отображения на странице. Самый простой React-компонент — это простая функция JavaScript, которая возвращает элементы React </i></div>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/docs/glossary.html">https://ru.reactjs.org/docs/glossary.html</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #18 -->
+				<section class="slide-18">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Внутреннее представление React-элемента</div>
+						<div class="slide-content">
+						<pre><code class="language-jsx line-numbers">
+							const Button = ({name: string}) =>
+								React.createElement(
+									'button',
+									{
+										onClick: function onClick() {
+											return alert('Click');
+										},
+										className: 'btn'
+									},
+									name,
+								);
+							const DivWithButton = () => 
+								React.createElement(
+									'div',
+									{
+										className: 'wrapper',
+										style: {
+											margin: '5px',
+										},
+									},
+									Button({ name: 'Click me'}),
+								);
+						</code></pre>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #19 -->
+				<section class="slide-19">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">React - абстрактная идея</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Может использоваться на разных платформах ( не только Web, но и нативные системы и что-угодно еще представляющее UI)</li>
+							<li class="slide__list-item">Сам React никак не связан ни с Web ни с DOM</li>
+							<li class="slide__list-item">Для работы с DOM(HTML) используется отдельный пакет - <strong>react-dom</strong></li>
+						</ul>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/docs/react-dom.html#overview">https://ru.reactjs.org/docs/react-dom.html#overview</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #20 -->
+				<section class="slide-20">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Отрисовать React-элемент</div>
+						<div class="slide__subtitle">render()</div>
+						<div class="slide-content">
+						<pre class="auto"><code class="language-jsx line-numbers">
+							ReactDOM.render(element, container[, callback])
+						</code></pre>
+						Рендерит React-элемент в DOM-элемент, переданный в агрумент <mark>container</mark>
+						и возвращает <u>ссылку</u> на компонент (или возвращает <mark>null</mark> для <u>компонентов без состояния</u>).
+						<br>
+						<br>
+						Если React-элемент уже был ранее отрендерен в <mark>container</mark>, то повторный вызов произведёт его обновление
+						и изменит соответствующую часть DOM, чтобы она содержала последние изменения.
+						</div>
+					</div>
+				</section>
+				<!-- Slide #21 -->
+				<section class="slide-21">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Что такое компонент?</div>
+						<div class="slide-content">
+						<ul class="slide-content__list">
+							<li class="slide__list-item">
+								<div class="slide-content__link">
+									<a href="https://ru.reactjs.org/docs/react-without-jsx.html">https://ru.reactjs.org/docs/react-without-jsx.html</a>
+								</div>
+							</li>
+							<li class="slide__list-item">
+								<div class="slide-content__link">
+									<a href="https://stackblitz.com/edit/basic-react-dom">https://stackblitz.com/edit/basic-react-dom</a>
+								</div>
+							</li>
+							<li class="slide__list-item">
+								<div class="slide-content__link">
+									<a href="https://ru.reactjs.org/docs/rendering-elements.html">https://ru.reactjs.org/docs/rendering-elements.html</a>
+								</div>
+						</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #22 -->
+				<section class="slide-22">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #23 -->
+				<section class="slide-23">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">JSX</div>
+						<div class="slide-content">
+						JSX - синтаксический "сахар" для функции
+						<mark>React.CreateElement(component, props, ..children)</mark>. Этот JSX-код:
+						<pre class="auto"><code class="language-jsx line-numbers">
+							&lt;MyButton color="blue shadowSize={2}">
+								Нажми меня
+							&lt;/MyButton>
+						</code></pre>
+						Скомпилируется в:
+						<pre class="auto"><code class="language-jsx line-numbers">
+							React.createElement(
+								MyButton,
+								{color: 'blue', shadowSize: 2},
+								'Нажми меня'
+							)
+						</code></pre>
+						</div>
+						<div class="slide-content__link">
+							<a href="https://ru.reactjs.org/docs/jsx-in-depth.html">https://ru.reactjs.org/docs/jsx-in-depth.html</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #24 -->
+				<section class="slide-24">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">JSX</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">
+								<div class="slide-content__link">
+									<a href="https://ru.reactjs.org/docs/introducing-jsx.html">
+										https://ru.reactjs.org/docs/introducing-jsx.html
+									</a>
+								</div>
+							</li>
+							<li class="slide__list-item">
+								<div class="slide-content__link">
+									<a href="https://ru.reactjs.org/docs/jsx-in-depth.html">https://ru.reactjs.org/docs/jsx-in-depth.html</a>
+								</div>
+							</li>
+						</ul>
+						<pre class="auto"><code class="language-jsx line-numbers">
+							&lt;div className="wrapper" style={{margin: '5px'}}>&lt;/div>
+								&lt;button onClick={() => alert('Click')} className="btn">Click me&lt;/button>
+							&lt;/div>
+						</code></pre>
+						<div class="slide-content__link"><a href="">
+							Как этот код обрабатывается Babel
+						</a></div>
+					</div>
+				</section>
+				<!-- Slide #25 -->
+				<section class="slide-25">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">JSX - тот же пример</div>
+						<div class="slide-content__link"><a href="https://stackblitz.com/edit/react-basic-jsx-example">
+							https://stackblitz.com/edit/react-basic-jsx-example
+						</a></div>
+					</div>
+				</section>
+				<!-- Slide #26 -->
+				<section class="slide-26">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">JSX - это не только про реакт</div>
+						<div class="slide-content__link"><a href="https://github.com/substack/babel-plugin-jsx-factory">
+							https://github.com/substack/babel-plugin-jsx-factory
+						</a></div>
+					</div>
+				</section>
+				<!-- Slide #27 -->
+				<section class="slide-27">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper">
+						<div class="slide__title">Правила JSX</div>
+						<div class="slide-content__link"><a href="https://stackblitz.com/edit/react-basic-jsx-example?embed=1&file=jsxExamples.jsx">
+							https://stackblitz.com/edit/react-basic-jsx-example?embed=1&file=jsxExamples.jsx
+						</a></div>
+					</div>
+				</section>
+				<!-- Slide #28 -->
+				<section class="slide-28">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #29 -->
+				<section class="slide-29">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">Два вида компонентов</div>
+						<div class="slide-content">
+						<ul class="slide-content__list">
+							<li class="slide__list-item">“умные”</li>
+							<li class="slide__list-item">“презентационные”</li>
+						</ul>
+					</div>
+						<div class="slide-content__link"><a href="Презентационный компонент и контейнер в React">
+							Презентационный компонент и контейнер в React
+						</a></div>
+				</section>
+				<!-- Slide #30 -->
+				<section class="slide-30">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">“Глупые” компоненты можно делать чистыми функциями</div>
+						<div class="slide-content">
+						<p>В языках программирования чистая функция - это функция, которая:</p>
+						<ul class="slide-content__list decimal">
+							<li class="slide__list-item">является детерминированной</li>
+							<li class="slide__list-item">не обладает побочными эффектами</li>
+						</ul>
+						<p>А значит:</p>
+						<ul class="slide-content__list decimal">
+							<li class="slide__list-item">легко тестировать</li>
+							<li class="slide__list-item">не обладает побочными эффектами</li>
+						</ul>
+					</div>
+						<div class="slide-content__link"><a href="Просто к сведению">
+							Просто к сведению
+						</a></div>
+				</section>
+				<!-- Slide #31 -->
+				<section class="slide-31">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Где хранится состояние?</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">у классовых компонентов есть `state`</li>
+							<li class="slide__list-item">у всех компонентов есть props (свойства)</li>
+							<li class="slide__list-item">у современных функциональных компонентов тоже может быть state (через хуки)</li>
+							<li class="slide__list-item">состояние может хранится во внешнем хранилище (например  redux)</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #32 -->
+				<section class="slide-32">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Обновления в дерева в React*</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Компонент перерисовывается автоматически при изменении его свойств</li>
+							<li class="slide__list-item">Компонент перерисовывается автоматически при изменении его состояния</li>
+							<li class="slide__list-item">Компонент перерисовывается при использовании forceUpdate</li>
+							<li class="slide__list-item">При изменении компонента перерисовывает он, и все его дочерние элементы</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #33 -->
+				<section class="slide-33">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #34 -->
+				<section class="slide-34">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Как работает vDOM</div>
+					</div>
+				</section>
+				<!-- Slide #35 -->
+				<section class="slide-35">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper start">
+						<div class="slide__title">Virtual DOM</div>
+						<ul class="slide-content__list">
+							<li class="slide__list-item">Совсем не Shadow DOM</li>
+							<li class="slide__list-item">Архитектура React — заново отрисовать все приложение при изменении</li>
+							<li class="slide__list-item">Работа с DOM напрямую — медленно</li>
+							<li class="slide__list-item">vDOM — модель настоящего DOM на легких js- объектах</li>
+						</ul>
+					</div>
+				</section>
+				<!-- Slide #36 -->
+				<section class="slide-36">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Diff-algorithm</div>
+						<img src="./images/diff-algo.jpg" alt="">>
+					</div>
+				</section>
+				<!-- Slide #37 -->
+				<section class="slide-37">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #38 -->
+				<section class="slide-38">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Документирование <br> компонентов</div>
+					</div>
+				</section>
+				<!-- Slide #39 -->
+				<section class="slide-39">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">JSDoc</div>
+						<div class="slide-content">
+							<pre class="auto"><code class="language-jsx line-numbers">
+								/**
+								*
+								*@param props { object } Component props
+								*@param props.name { String } User name
+								**/
+								const Cmp1 = ({ name }) => &lt;span>{name}&lt;/span>
+
+								&lt;Cmp1 name={3} />
+							</code></pre>
+						</div>
+						<div class="slide-content__link">
+							<a href="https://www.inkoop.io/blog/a-guide-to-js-docs-for-react-js/">https://www.inkoop.io/blog/a-guide-to-js-docs-for-react-js/</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #40 -->
+				<section class="slide-40">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">TS</div>
+						<div class="slide-content">
+							<pre class="auto"><code class="language-jsx line-numbers">
+								interface Cmp3Props {name: string}
+								const Cmp2: React.FC&lt;Cmp3Props> = ({name}) => &lt;span>{name}&lt;/span>;
+
+								&lt;Cmp2 name={3} />
+							</code></pre>
+						</div>
+						<div class="slide-content__link">
+							<a href="https://www.danielbischoff.com/blog/2018-02-26--ts-react-props/">https://www.danielbischoff.com/blog/2018-02-26--ts-react-props/
+							</a>
+						</div>
+						<div class="slide-content__link">
+							<a href="Шпаргалка: React и TS">Шпаргалка: React и TS
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #41 -->
+				<section class="slide-41">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper space-between">
+						<div class="slide__title">PropTypes</div>
+						<div class="slide-content">
+							<pre class="auto"><code class="language-jsx line-numbers">
+								import PropTypes from 'prop-types';
+
+								const Cmp3 = ({ name }) => &lt;span>{name}&lt;/span>;
+
+								Cmp3.propTypes = {
+									name: PropTypes.string
+								};
+
+								&lt;Cmp3 name={3} />
+							</code></pre>
+						</div>
+						<div class="slide-content__link">
+							<a href="Проверка типов с помощью PropTypes">Проверка типов с помощью PropTypes
+							</a>
+						</div>
+						<div class="slide-content__link">
+							<a href="Пример">Пример
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #42 -->
+				<section class="slide-42">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<img class="slide__bottom-logo" src="./images/otus-owl.jpg" alt="otus-owl"/>
+					<div class="line"></div>
+					<div class="line"></div>
+
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Вопросы?</div>
+					</div>
+				</section>
+				<!-- Slide #43 -->
+				<section class="slide-43">
+					<div class="slide__title">Домашнее задание</div>
+					<div class="slide-inner-wrapper">
+						<div class="slide-content">
+							<p>
+								<b>Разрабатываем свой "сложный" компонент.</b><br>
+								На свое усмотрение разрабатываем схему с родительским и дочерним компонентом.<br>
+								Родительский компонент выводит список дочерних, например список todo-list<br>
+							</p>
+							<p>
+								<b>Пример, применительно к <a href="game of life">game of life</a> проекту <br>
+								<em>Разрабатываем поле и наполняем его квадратиками. Родительский компонент "держит" данные. Дочерние принимают порядковые номера и выводят их.<br>
+								Пока не нужно обращать внимание на стили. Можно обойтись условными обозначениями - границами и числом внутри.</em><br></b>
+							</p>
+							<p>
+							<b>Требования</b>
+							<ul class="slide-content__list">
+								<li class="slide__list-item">разработку ведем по TDD</li>
+								<li class="slide__list-item">разработка ведется от storybook</li>
+							</ul>
+							</p>
+							<p>
+								<b>Что нужно сделать?</b>
+								<ul class="slide-content__list">
+									<li class="slide__list-item">устанавливаем и настраиваем storybook knobs для манипуляции данными</li>
+									<li class="slide__list-item">родительский компонент должен принимать данные для отображения</li>
+									<li class="slide__list-item">проектируем родительский компонент, который будет выводить лист дочерних компонентов</li>
+									<li class="slide__list-item">правильно добавляем обработчик события click, выводящий номер квадратика</li>
+									<li class="slide__list-item">покрываем обработчики тестами</li>
+								</ul>
+							</p>
+							<p>
+								+ 1 балл за настройку storybook knobs<br>
+								+ 2 балла за компоненты с правильной иерархией<br>
+								+ 1 балл за обработчик событий<br>
+								+ 1 балл за тесты<br>
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #44 -->
+				<section class="slide-44">
+					<div class="slide__title">Опрос о занятии</div>
+					<div class="slide-inner-wrapper">
+						<div class="slide-content">
+							<div class="slide-content__link">
+								<a href="https://otus.ru/polls/9496/">https://otus.ru/polls/9496/
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Slide #45 -->
+				<section class="slide-45">
+					<img class="slide__top-logo" src="./images/otus-logo.jpg" alt="otus-logo"/>
+					<div class="line"></div>
+					<div class="slide-inner-wrapper center">
+						<div class="slide__title">Спасибо за внимание!
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+		<script src="plugin/prism/prism.js"></script>
+		<script>
+			[].forEach.call(document.querySelectorAll('code'), function($code) {
+			const lines = $code.textContent.split('\n');
+
+			document.querySelectorAll('code');
+
+			if (lines[0] === '')
+			{
+				lines.shift()
+			}
+
+			let whiteSpaces = 0;
+			const firstLineChars = lines[0].split('')
+
+			for (let i = 0; i < firstLineChars.length; i++) {
+				if (firstLineChars[i] === "	") 
+					whiteSpaces++; 
+				else break;
+			}
+
+			const newContent = [];
+
+			lines.forEach(line => {
+				line = line.split('');
+				line.splice(0, whiteSpaces);
+				line = line.join('');
+				newContent.push(line);
+			})
+
+			$code.textContent = newContent.join('\n');
+			});
+		</script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+			});
+		</script>
+	</body>
+</html>
